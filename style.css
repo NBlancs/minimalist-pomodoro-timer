@@ -17,9 +17,9 @@ body {
 
 h1 {
     font-size: 2.5rem;
-    font-weight: 700; /* Changed from 300 to 700 for bolder text */
+    font-weight: 700; 
     margin-bottom: 3rem;
-    letter-spacing: 0.5px; /* Added for better text appearance */
+    letter-spacing: 0.5px; 
 }
 
 #timer {
