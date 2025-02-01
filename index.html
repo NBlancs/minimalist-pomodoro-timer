@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="">
+    <title>Pomodoro Timer</title>
+    <!-- Add Montserrat font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Pomodoro Timer</h1>
+    <div id="timer">25:00</div>
+    <div class="slider-container">
+        <input type="range" id="timeSlider" min="1" max="60" value="25">
+        <div class="slider-labels">
+            <span>0</span>
+            <span>60</span>
+        </div>
+    </div>
+    <audio id="endSound" src="videoplayback.m4a" loop></audio>
+    <div class="buttons">
+        <button id="startBtn">Start</button>
+        <button id="resetBtn">Reset</button>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p>Session Over</p>
+            <button id="modalCloseBtn">OK</button>
+        </div>
+    </div>
+</body>
+<script src="./app.js"></script>
+<footer>
+    <p>© <span id="currentYear"></span> Nblancs | All rights reserved</p>
+</footer>
+<script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
+</html>
