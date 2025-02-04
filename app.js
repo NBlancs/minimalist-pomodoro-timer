@@ -120,12 +120,25 @@ function downloadTxt() {
 
 function downloadFile(extension, mimeType) {
     const headers = ['Date', 'Time', 'Duration (minutes)'];
-    const content = [
-        headers.join('\t'),
-        ...sessionHistory.map(session => 
-            `${session.date}\t${session.time}\t${session.duration}`
-        )
-    ].join('\n');
+    let content;
+    
+    if (extension === 'csv') {
+        // Proper CSV formatting with comma separation and quote wrapping
+        content = [
+            headers.join(','),
+            ...sessionHistory.map(session => 
+                `"${session.date}","${session.time}","${session.duration}"`
+            )
+        ].join('\n');
+    } else {
+        // TXT format remains tab-separated
+        content = [
+            headers.join('\t'),
+            ...sessionHistory.map(session => 
+                `${session.date}\t${session.time}\t${session.duration}`
+            )
+        ].join('\n');
+    }
 
     const blob = new Blob([content], { type: mimeType });
     const link = document.createElement('a');
