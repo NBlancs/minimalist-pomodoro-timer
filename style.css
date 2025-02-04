@@ -88,6 +88,16 @@ button:disabled {
     cursor: not-allowed;
 }
 
+#clearHistoryBtn {
+    background-color: rgba(255, 59, 48, 0.1);
+    border-color: rgba(255, 59, 48, 0.3);
+    color: rgba(255, 59, 48, 0.9);
+}
+
+#clearHistoryBtn:hover {
+    background-color: rgba(255, 59, 48, 0.2);
+}
+
 .modal {
     display: none;
     position: fixed;
@@ -111,6 +121,57 @@ button:disabled {
 .modal-content p {
     margin-bottom: 1rem;
     font-size: 1.5rem;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.history-content {
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    min-width: 600px;
+    padding: 2rem;
+}
+
+.history-content h2 {
+    margin-bottom: 1.5rem;
+}
+
+#historyList {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+#historyList div {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#historyList table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#historyList th, #historyList td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#historyList th {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 footer {

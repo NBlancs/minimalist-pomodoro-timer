@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="timer-icon-vector.jpg">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="">
     <title>Pomodoro Timer</title>
@@ -22,12 +23,24 @@
     <audio id="endSound" src="videoplayback.m4a" loop></audio>
     <div class="buttons">
         <button id="startBtn">Start</button>
+        <button id="historyBtn">View History</button>
         <button id="resetBtn">Reset</button>
     </div>
     <div id="modal" class="modal">
         <div class="modal-content">
             <p>Session Over</p>
             <button id="modalCloseBtn">OK</button>
+        </div>
+    </div>
+    <div id="historyModal" class="modal">
+        <div class="modal-content history-content">
+            <h2>Session History</h2>
+            <div id="historyList"></div>
+            <div class="modal-buttons">
+                <button id="downloadExcelBtn">Download Excel</button>
+                <button id="downloadTxtBtn">Download TXT</button>
+                <button id="historyCloseBtn">Close</button>
+            </div>
         </div>
     </div>
 </body>
